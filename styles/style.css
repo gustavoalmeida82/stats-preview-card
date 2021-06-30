@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+
+    /*Primary*/
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-whiteA: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-whiteB: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue);   
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;        
+}
+
+p {
+  line-height: 1.6;
+}
+
+.main {       
+    padding: 10% 5% 0 5%;
+}
+
+.card {
+    background-color: var(--dark-desaturated-blue);
+    color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-container {    
+    background-color: var(--soft-violet);
+    background-image: url('../images/image-header-mobile.jpg');
+    background-position: center;
+    background-size: cover;    
+    background-blend-mode: multiply;
+    height: 330px;    
+}
+
+.main-text {       
+    text-align: center;
+    padding: 10%;
+}
+
+.main-text h1 {
+    color: var(--white);
+}
+
+.main-text strong {
+    color: var(--soft-violet);
+}
+
+.main-text p {
+    color: var(--slightly-transparent-whiteA);
+    padding-top: 5%;
+}
+
+.stats {        
+    text-align: center;
+}
+
+.stats h2 {           
+    color: var(--white);
+    padding-bottom: 1%;
+}
+
+.stats p {    
+    text-transform: uppercase;   
+    font-weight: 400;
+    color: var(--slightly-transparent-whiteB);
+    padding-bottom: 6%;
+}
+
+.attribution {
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+
+    body {
+        background-color: var(--very-dark-blue);   
+    }
+
+    .main {       
+        padding: 5% 5% 0 5%;
+    }
+
+    .image-container {
+        height: 500px;
+    }
+
+}
+
+@media (min-width: 900px) {
+    
+    body {
+        background-color: var(--very-dark-blue);   
+    }
+
+    .main {
+        min-height: 80vh;
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+    .main-text {
+        text-align: left;
+        padding: 12% 12% 20% 12%;
+    }
+
+    .image-container {    
+        background-color: var(--soft-violet);
+        background-image: url('../images/image-header-desktop.jpg');
+        background-position: center;
+        background-size: cover;    
+        background-blend-mode: multiply;
+        width: 100%;
+        height: 446px;    
+    }
+
+    .stats {
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        margin: 0 0 0 12%;
+    }
+
+    .stats div {
+        padding-right: 12%;
+    }
+}
