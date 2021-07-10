@@ -11,6 +11,10 @@
     --white: hsl(0, 0%, 100%);
     --slightly-transparent-whiteA: hsla(0, 0%, 100%, 0.75);
     --slightly-transparent-whiteB: hsla(0, 0%, 100%, 0.6);
+
+    /*Fonts*/
+    --font1: 'Inter', sans-serif;
+    --font2: 'Lexend Deca', sans-serif;
 }
 
 * {
@@ -21,7 +25,7 @@
 
 body {
     background-color: var(--very-dark-blue);   
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font1);
     font-size: 15px;        
 }
 
@@ -30,15 +34,18 @@ p {
 }
 
 .main {       
-    padding: 10% 5% 0 5%;
+    padding: 18% 5% 0 5%;
+    display: flex;
+    justify-content: center;
 }
 
 .card {
     background-color: var(--dark-desaturated-blue);
     color: var(--white);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     text-align: center;
+    min-width: 337.5px;    
 }
 
 .image-container {    
@@ -47,7 +54,7 @@ p {
     background-position: center;
     background-size: cover;    
     background-blend-mode: multiply;
-    height: 330px;    
+    min-height: 240px;    
 }
 
 .main-text {       
@@ -57,6 +64,7 @@ p {
 
 .main-text h1 {
     color: var(--white);
+    font-size: 1.8em;
 }
 
 .main-text strong {
@@ -68,6 +76,25 @@ p {
     padding-top: 5%;
 }
 
+.stats {
+    text-transform: uppercase;
+}
+
+.stats ul li {
+    padding-bottom: 8%;
+}
+
+.stats ul li strong{
+    color: var(--white);
+    font-size: 1.3em;    
+}
+
+.stats ul li p{
+    color: var(--slightly-transparent-whiteB);
+    font-size: 0.75em;
+}
+
+/*
 .stats {        
     text-align: center;
 }
@@ -83,7 +110,7 @@ p {
     color: var(--slightly-transparent-whiteB);
     padding-bottom: 6%;
 }
-
+*/
 .attribution {
     color: var(--white);
     width: 100%;
@@ -98,10 +125,6 @@ p {
 
     .main {       
         padding: 5% 5% 0 5%;
-    }
-
-    .image-container {
-        height: 500px;
     }
 
 }
