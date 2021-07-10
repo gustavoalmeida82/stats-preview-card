@@ -79,6 +79,7 @@ p {
 
 .stats ul li {
     padding-bottom: 8%;
+    list-style: none;
 }
 
 .stats ul li strong{
@@ -106,25 +107,30 @@ p {
 }
 
 @media (min-width: 900px) {
+
+    body {
+        min-height: 100vh;
+    }
     
-    .main {
-        min-height: 80vh;
+    .main {      
         padding: 5%;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     .card {
         display: flex;
-        flex-direction: row-reverse;
-        
+        flex-direction: row-reverse;        
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
     }
 
     .main-text {
-        text-align: left;
-        padding: 12% 12% 20% 12%;
+        text-align: left;        
     }
 
     .image-container {    
@@ -136,14 +142,14 @@ p {
         width: 100%;       
     }
 
-    .stats {
-        display: flex;
-        justify-content: left;
+    .stats ul {
         text-align: left;
-        margin: 0 0 0 12%;
+        margin-left: 10%;
     }
 
-    .stats div {
-        padding-right: 12%;
+    .stats ul li {
+        display: inline-block;  
+        text-align: left;    
+        margin-right: 10%;  
     }
 }
