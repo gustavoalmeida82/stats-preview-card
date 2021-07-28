@@ -2,7 +2,7 @@
     /*Primary*/
     --very-dark-blue: hsl(233, 47%, 7%);
     --dark-desaturated-blue: hsl(244, 38%, 16%);
-    --soft-violet: hsl(277, 64%, 61%);
+    --soft-violet: hsl(277, 64%, 61%);    
 
     /*Neutral*/
     --white: hsl(0, 0%, 100%);
@@ -23,15 +23,17 @@
 body {
     background-color: var(--very-dark-blue);   
     font-family: var(--font1);
-    font-size: 15px;        
+    font-size: 1rem; /*16px*/        
 }
 
 p {
+  font-size: 0.9375rem; /*15px*/
   line-height: 1.6;
 }
 
-.main {       
-    padding: 18% 5% 0 5%;
+.container {           
+    margin: 5rem auto 0 auto;
+    max-width: 21.09375rem;
     display: flex;
     justify-content: center;
 }
@@ -41,8 +43,7 @@ p {
     color: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    text-align: center;
-    min-width: 337.5px;    
+    text-align: center;      
 }
 
 .image-container {    
@@ -51,7 +52,7 @@ p {
     background-position: center;
     background-size: cover;    
     background-blend-mode: multiply;
-    min-height: 240px;    
+    min-height: 16rem;    
 }
 
 .main-text {       
@@ -61,14 +62,14 @@ p {
 
 .main-text h1 {
     color: var(--white);
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 .main-text strong {
     color: var(--soft-violet);
 }
 
-.main-text p {
+.main-text p {    
     color: var(--slightly-transparent-whiteA);
     padding-top: 5%;
 }
@@ -89,7 +90,8 @@ p {
 
 .stats ul li p{
     color: var(--slightly-transparent-whiteB);
-    font-size: 0.75em;
+    font-size: 0.6875rem; /*11px*/
+    letter-spacing: 0.09375rem; /*1.5px*/
 }
 
 .attribution {
@@ -98,25 +100,18 @@ p {
     text-align: center;
 }
 
-@media (min-width: 600px) {
-
-    .main {       
-        padding: 5% 5% 0 5%;
-    }
-
-}
-
-@media (min-width: 900px) {
+@media (min-width: 60rem) /*960px*/ {
 
     body {
-        min-height: 100vh;
-    }
-    
-    .main {      
-        padding: 5%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    
+    .container {                     
+        max-width: 67.5rem;
+        min-height: 27.875rem;
     }
 
     .card {
@@ -151,5 +146,15 @@ p {
         display: inline-block;  
         text-align: left;    
         margin-right: 10%;  
+    }
+
+    .stats ul li p {
+        font-size: 0.9375rem; /*15px*/;
+        letter-spacing: normal;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
     }
 }
