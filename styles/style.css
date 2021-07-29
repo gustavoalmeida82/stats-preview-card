@@ -55,9 +55,12 @@ p {
     min-height: 16rem;    
 }
 
+.text-container {
+    padding: 10%;
+}
+
 .main-text {       
     text-align: center;
-    padding: 10%;
 }
 
 .main-text h1 {
@@ -72,6 +75,7 @@ p {
 .main-text p {    
     color: var(--slightly-transparent-whiteA);
     padding-top: 5%;
+    padding-bottom: 15%;
 }
 
 .stats {
@@ -98,6 +102,7 @@ p {
     color: var(--white);
     width: 100%;
     text-align: center;
+
 }
 
 @media (min-width: 60rem) /*960px*/ {
@@ -109,8 +114,9 @@ p {
         align-items: center;
     }
     
-    .container {                     
-        max-width: 67.5rem;
+    .container {      
+        margin: auto;               
+        max-width: 58.25rem;
         min-height: 27.875rem;
     }
 
@@ -120,11 +126,13 @@ p {
     }
 
     .text-container {
+        padding: 6% 0 6% 6%;
         display: flex;
         flex-direction: column;
+        min-width: 29.125rem;  /*466px*/      
     }
 
-    .main-text {
+    .main-text {        
         text-align: left;        
     }
 
@@ -134,12 +142,11 @@ p {
         background-position: center;
         background-size: cover;    
         background-blend-mode: multiply;
-        width: 100%;       
+        min-width: 29.125rem;  /*466px*/     
     }
 
     .stats ul {
-        text-align: left;
-        margin-left: 10%;
+        text-align: left;        
     }
 
     .stats ul li {
