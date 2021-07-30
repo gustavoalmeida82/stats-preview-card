@@ -126,7 +126,7 @@ p {
     }
 
     .text-container {
-        padding: 6% 0 6% 6%;
+        padding: 6% 5% 6% 6%;        
         display: flex;
         flex-direction: column;
         min-width: 29.125rem;  /*466px*/      
@@ -152,7 +152,8 @@ p {
     .stats ul li {
         display: inline-block;  
         text-align: left;    
-        margin-right: 10%;  
+        padding-right: 10%;
+        padding-top: 10%;  
     }
 
     .stats ul li p {
