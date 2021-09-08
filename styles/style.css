@@ -1,168 +1,80 @@
 :root {
-    /*Primary*/
-    --very-dark-blue: hsl(233, 47%, 7%);
-    --dark-desaturated-blue: hsl(244, 38%, 16%);
-    --soft-violet: hsl(277, 64%, 61%);    
 
-    /*Neutral*/
-    --white: hsl(0, 0%, 100%);
-    --slightly-transparent-whiteA: hsla(0, 0%, 100%, 0.75);
-    --slightly-transparent-whiteB: hsla(0, 0%, 100%, 0.6);
+    --clr-main-background: hsl(233, 47%, 7%);
+    --clr-card-background: hsl(244, 38%, 16%);
+    --clr-accent: hsl(277, 64%, 61%);
 
-    /*Fonts*/
-    --font1: 'Inter', sans-serif;
-    --font2: 'Lexend Deca', sans-serif;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --clr-stat-headings: hsla(0, 0%, 100%, 0.6);
 }
 
-* {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--very-dark-blue);   
-    font-family: var(--font1);
-    font-size: 1rem; /*16px*/        
+    background: var(--clr-main-background);
+    color: var(--clr-white);
+    font-size: 0.93751rem; /*15px*/
+    font-family: 'Inter', sans-serif;
 }
 
-p {
-  font-size: 0.9375rem; /*15px*/
-  line-height: 1.6;
+.text-center {
+    text-align: center;
 }
 
-.container {           
-    margin: 5rem auto 0 auto;
-    max-width: 21.09375rem;
-    display: flex;
-    justify-content: center;
+.container {
+    padding: 5em 1.3em 0em 1.3em;
 }
 
 .card {
-    background-color: var(--dark-desaturated-blue);
-    color: var(--white);
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;      
+    background: var(--clr-card-background);
+    border-radius: 15px;
+    overflow: hidden;    
+    margin: 0 auto;
+    min-width: 22.4em;
+    display: flex;
+    flex-direction: column;
 }
 
-.image-container {    
-    background-color: var(--soft-violet);
-    background-image: url('../images/image-header-mobile.jpg');
-    background-position: center;
-    background-size: cover;    
-    background-blend-mode: multiply;
-    min-height: 16rem;    
+.card-img {
+    background-image: url(/images/image-header-mobile.jpg);
+    background-size: cover;
+    background-position: center;    
+    min-height: 17.33em;
+    position: relative;
 }
 
-.text-container {
-    padding: 10%;
+.card-img::before {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-accent);
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.main-text {       
-    text-align: center;
+.card-text {
+    padding: 10% 8%;
 }
 
-.main-text h1 {
-    color: var(--white);
-    font-size: 1.8rem;
+.tag {
+    color: var(--clr-accent);
 }
 
-.main-text strong {
-    color: var(--soft-violet);
+.card-text-main__description {
+    color: var(--clr-main-paragraph);
+    margin: 1.5em 0.9em;
+    line-height: 1.7;
 }
 
-.main-text p {    
-    color: var(--slightly-transparent-whiteA);
-    padding-top: 5%;
-    padding-bottom: 15%;
-}
-
-.stats {
-    text-transform: uppercase;
-}
-
-.stats ul li {
-    padding-bottom: 8%;
-    list-style: none;
-}
-
-.stats ul li strong{
-    color: var(--white);
-    font-size: 1.3em;    
-}
-
-.stats ul li p{
-    color: var(--slightly-transparent-whiteB);
-    font-size: 0.6875rem; /*11px*/
-    letter-spacing: 0.09375rem; /*1.5px*/
-}
-
-.attribution {
-    color: var(--white);
-    width: 100%;
-    text-align: center;
-
-}
-
-@media (min-width: 60rem) /*960px*/ {
-
-    body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .container {      
-        margin: auto;               
-        max-width: 58.25rem;
-        min-height: 27.875rem;
-    }
-
-    .card {
-        display: flex;
-        flex-direction: row-reverse;        
-    }
-
-    .text-container {
-        padding: 6% 5% 6% 6%;        
-        display: flex;
-        flex-direction: column;
-        min-width: 29.125rem;  /*466px*/      
-    }
-
-    .main-text {        
-        text-align: left;        
-    }
-
-    .image-container {    
-        background-color: var(--soft-violet);
-        background-image: url('../images/image-header-desktop.jpg');
-        background-position: center;
-        background-size: cover;    
-        background-blend-mode: multiply;
-        min-width: 29.125rem;  /*466px*/     
-    }
-
-    .stats ul {
-        text-align: left;        
-    }
-
-    .stats ul li {
-        display: inline-block;  
-        text-align: left;    
-        padding-right: 10%;
-        padding-top: 10%;  
-    }
-
-    .stats ul li p {
-        font-size: 0.9375rem; /*15px*/;
-        letter-spacing: normal;
-    }
-
-    .attribution {
-        position: absolute;
-        bottom: 0;
-    }
+.stats-items {    
+    list-style: none;        
 }
