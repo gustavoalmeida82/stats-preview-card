@@ -26,15 +26,7 @@ body {
     font-size: var(--fs);
     color: var(--clr-neutral-300);
     font-family: var(--ff-base);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-img {
-    display: block;    
-    max-width: 100%;    
+    padding: 18.9rem 0;
 }
 
 .card {
@@ -43,10 +35,10 @@ img {
     max-width: 55em; 
     border-radius: 5px;   
     overflow: hidden;
+    margin: 0 auto;
 }
 
-.text-cont {
-    max-width: 28em;
+.text-cont {    
     padding: 3.5em;    
 }
 
@@ -65,8 +57,11 @@ img {
     list-style: none;
 }
 
-.img-cont {
-    max-width: 30em;
+.img-cont {    
+    background-image: url(images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 12.5rem;
     position: relative;
 }
 
